@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TO-DO LIST WEB</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>GRINDER</h1>
+        </header>
+        <main>
+            <aside id="menu">
+                <h2>Menu</h2>
+                <nav>
+                    <ul>
+                        <li><button id="btn-creert">créer une tache</button></li>
+                        <li><button id="btn-creerl">créer une liste de tache</button></li>
+                        <li class="deroulant"><button href="#">modifier une tache</button>
+                            <ul class="sous">
+                                <li><button id="btn-modit">modifier un titre</button></li>
+                                <li><button id="btn-modiet">modifier un état</button></li>
+                                <li><button id="btn-modiprio">modifier la priorité</button></li>
+                                <li><button id="btn-modiduree">modifier une durée</button></li>
+                            </ul>
+                        </li>
+                        <li><button id="btn-supp">supprimer une tache</button></li>
+                        <li><button id="btn-save">sauvegarder les taches</button></li>
+                        <li><button id="btn-charg">charger une sauvegarde</button></li>
+                        <li class="deroulant"><button href="#">Time-Line</button>
+                            <ul class="sous">
+                                <li><button id="btn-j">jour</button></li>
+                                <li><button id="btn-s">semaine</button></li>
+                                <li><button id="btn-m">mois</button></li>
+                            </ul>
+                        </li>        
+                    </ul>
+                </nav>
+            </aside>
+            <section id="taches">
+                <h2>Tâches</h2>
+                <form id="form-creer" onsubmit="event.preventDefault();creationTacheJS();">
+                    <input id="titre" type="text" placeholder="Titre"required>
+                    <input id="horaire" type="text" placeholder="durée" required>
+                    <input id="priorite"type="number" min="1" step="1" placeholder="priorité" required>
+                    <button type="submit">Ajouter</button>
+                </form>
+                <ul id="listeTaches"></ul>
+            </section>
+            <aside id="progression">
+                <h2></h2>
+                <div id="barre-progression">
+                    <div id="barre-remplie"></div>
+                </div>
+                <div id="progress-text">0%</div>
+            </aside>
+        </main>
+        <footer>
+            <p>© 2025 - Projet To-Do List</p>
+        </footer>
+        <script src="projet_WEB.js"></script>
+        <script src="projet2.JS"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
+
